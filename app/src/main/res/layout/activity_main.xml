@@ -22,8 +22,8 @@
 
             <ImageView
                 android:id="@+id/side_menu"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:layout_gravity="start"
                 android:src="@drawable/menu"
                 android:alpha="0.9"
@@ -35,8 +35,8 @@
                 android:id="@+id/profile"
                 android:src="@drawable/profile"
                 android:alpha="0.9"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:layout_gravity="end"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -44,8 +44,8 @@
 
             <ImageView
                 android:id="@+id/saved_posts"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:layout_gravity="end"
                 android:layout_marginEnd="24dp"
                 android:alpha="0.9"
@@ -54,10 +54,11 @@
                 app:layout_constraintEnd_toStartOf="@+id/profile"
                 app:layout_constraintTop_toTopOf="parent" />
 
+
             <ImageView
                 android:id="@+id/search"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:layout_gravity="end"
                 android:layout_marginEnd="24dp"
                 android:alpha="0.9"
@@ -66,14 +67,90 @@
                 app:layout_constraintEnd_toStartOf="@+id/saved_posts"
                 app:layout_constraintTop_toTopOf="parent" />
 
+
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:alpha="0.9"
+        android:background="@drawable/rounded_search_background"
+        android:orientation="horizontal"
+        android:paddingTop="2dp"
+        app:layout_constraintTop_toBottomOf="@+id/header_nav"
+        tools:ignore="MissingConstraints">
 
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/search"
+            android:alpha="0.3"
+            />
+
+        <EditText
+            android:id="@+id/event_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="Start typing..."
+            android:imeOptions="actionSearch"
+            android:padding="0dp"
+            android:textColor="#F5F5DC"
+            android:textColorHint="#CCCCCC"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="16dp"
+            android:alpha="0.7"
+            android:src="@drawable/cross"
+            />
+
+        <ImageButton
+            android:id="@+id/clear_search_button"
+            android:layout_width="24dp"
+            android:layout_marginRight="12dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:src="@drawable/qr"
+            android:alpha="0.7"
+            app:tint="@color/black" />
+
+
+    </LinearLayout>
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="824dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_bar">
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"

@@ -33,6 +33,9 @@ android {
 
 dependencies {
 
+    //swipe refresh
+    implementation ("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
+
     implementation(libs.appcompat)
     implementation(libs.material)
     testImplementation(libs.junit)
