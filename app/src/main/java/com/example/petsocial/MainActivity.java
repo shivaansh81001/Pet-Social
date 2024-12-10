@@ -1,5 +1,6 @@
 package com.example.petsocial;
 
+import android.animation.ObjectAnimator;
 import android.media.Image;
 import android.os.Bundle;
 import android.os.Handler;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
     private ImageView homeButton_;
     private ImageView addPost_;
     private LinearLayout searchBar_;
+    private Boolean isSearchBarvisible=false;
 
     @Override
     public void onCreate(Bundle savedInstanceState){
@@ -36,8 +38,13 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
         search_.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
-               Log.wtf("Search click", "Search button clicked");
-               view.setVisibility(View.VISIBLE);
+               if(!isSearchBarvisible) {
+                   searchBar_.setVisibility(View.VISIBLE);
+                   isSearchBarvisible = true;
+               }else{
+                   searchBar_.setVisibility(View.GONE);
+                   isSearchBarvisible = false;
+               }
            }
        });
     }

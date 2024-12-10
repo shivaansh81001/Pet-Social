@@ -19,6 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+
             <ImageView
                 android:id="@+id/side_menu"
                 android:layout_width="24dp"
@@ -29,6 +30,30 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/muthiara"
+                android:text="Pet"
+                android:textSize="20sp"
+                android:textColor="#2C77A4"
+                app:layout_constraintEnd_toStartOf="@+id/textView2" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="64dp"
+                android:fontFamily="@font/comic"
+                android:text="social"
+                android:textColor="@color/black"
+                android:alpha="0.7"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/search" />
+
 
             <ImageView
                 android:id="@+id/profile"
@@ -83,6 +108,7 @@
         android:paddingLeft="8dp"
         android:paddingRight="8dp"
         android:alpha="0.9"
+        android:visibility="gone"
         android:background="@drawable/rounded_search_background"
         android:orientation="horizontal"
         android:paddingTop="2dp"
@@ -149,6 +175,7 @@
 
         <!-- Fragment Container -->
         <androidx.fragment.app.FragmentContainerView
+
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
@@ -182,6 +209,15 @@
 
 
         <ImageView
+            android:id="@+id/reels"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:alpha="0.9"
+            android:src="@drawable/reels" />
+
+        <ImageView
             android:id="@+id/add_post"
             android:layout_width="40dp"
             android:layout_height="40dp"
@@ -189,7 +225,7 @@
             android:layout_weight="1"
             android:alpha="0.9"
             android:src="@drawable/add_post"
-            app:tint="#99AD48" />
+            app:tint="#2C77A4" />
 
         <ImageView
             android:id="@+id/saved_posts"
@@ -199,5 +235,14 @@
             android:layout_weight="1"
             android:alpha="1"
             android:src="@drawable/saved" />
+
+        <ImageView
+            android:id="@+id/personal"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:alpha="0.9"
+            android:src="@drawable/grid" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
