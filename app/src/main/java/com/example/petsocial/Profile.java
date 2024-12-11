@@ -11,11 +11,15 @@ public class Profile {
     private Uri ProfilePic;
     private String OwnerName;
     private String OwnerCellphone;
+    private String Bio;
     private String PetClass;
     private String Genus;
 
 
-    public Profile(String aClass, String genus, String ownerCellphone, String ownerName, String petname, Uri profilePic, String username) {
+
+
+    public Profile(String aClass, String genus, String ownerCellphone, String ownerName, String petname, Uri profilePic, String username, String bio) {
+        Bio=bio;
         PetClass = aClass;
         Genus = genus;
         OwnerCellphone = ownerCellphone;
@@ -25,6 +29,13 @@ public class Profile {
         Username = username;
     }
 
+    public String getBio() {
+        return Bio;
+    }
+
+    public void setBio(String bio) {
+        Bio = bio;
+    }
 
     public String getGenus() {
         return Genus;

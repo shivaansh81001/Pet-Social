@@ -1,6 +1,7 @@
 package com.example.petsocial;
 
 import android.animation.ObjectAnimator;
+import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.os.Handler;
@@ -47,6 +48,11 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
                }
            }
        });
+
+        profile_.setOnClickListener(v->{
+            Intent intentProfile= new Intent(MainActivity.this,ProfileActivity.class);
+            startActivity(intentProfile);
+        });
     }
 
     @Override

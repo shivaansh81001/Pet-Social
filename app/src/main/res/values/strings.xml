@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Pet Social</string>
+
+    <string-array name="animal_classes">
+        <item>C</item>
+        <item>C++</item>
+        <item>Java</item>
+        <item>JavaScript</item>
+        <item>VisualBasic</item>
+    </string-array>
+
+    <string-array name="animal_genus">
+        <item>C</item>
+        <item>C++</item>
+        <item>Java</item>
+        <item>JavaScript</item>
+        <item>VisualBasic</item>
+    </string-array>
+
 </resources>
+
